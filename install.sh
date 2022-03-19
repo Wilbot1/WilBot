@@ -1,1 +1,1 @@
-npm install
+#!/usr/bin/bash
