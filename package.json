@@ -2,9 +2,9 @@
   "name": "Nombre",
   "version": "0.0.0",
   "description": "",
-  "main": "wil.js",
+  "main": "Wil.js",
   "scripts": {
-  "start": "node wil.js"
+  "start": "node Wil.js"
   },
   "dependencies": {
     "@adiwajshing/baileys": "^3.4.1"
