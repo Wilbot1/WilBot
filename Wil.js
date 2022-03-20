@@ -1,6 +1,6 @@
-const { WAConnection, MessageType } = require('@adiwajshing/baileys');
+const { WAConnection, MessageType, Mimitype, } = require('@adiwajshing/baileys');
 const fs = require('fs');
-const prefix = '.'
+const prefix = '+'
 
 async function iniciar () { 
         const client = new WAConnection()
@@ -12,7 +12,7 @@ async function iniciar () {
         })
 
 //crear un archivo Json para guardar información: ID del cliente, Token y Keys del cliente y del SERVER.
-        fs.existsSync('./Samu330.json') && client.loadAuthInfo('./Samu330.json')
+        fs.existsSync('./Wil.json') && client.loadAuthInfo('./Wil.json')
 
 //Conectando o reconectando
         client.on('connecting', () => {
@@ -24,7 +24,7 @@ async function iniciar () {
         console.log('Conectado exitosamente :D')
         })
         await client.connect({timeoutMs: 30*1000})
-        fs.writeFileSync('./Samu330.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
+        fs.writeFileSync('./Wil.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
         
 
 client.on('chat-update', async (sam) => {
@@ -68,7 +68,7 @@ const isCmd = budy.startsWith(prefix)
 const q = args.join(' ')
 const soyYo = client.user.jid
 const botNumber = client.user.jid.split("@")[0]
-const ownerNumber = ['########@s.whatsapp.net']
+const ownerNumber = ['51985761261@s.whatsapp.net']
 const isGroup = from.endsWith('@g.us')
 const sender = sam.key.fromMe ? client.user.jid : isGroup ? sam.participant : sam.key.remoteJid
 const senderNumber = sender.split("@")[0]
