@@ -79,7 +79,14 @@ const pushname = sam.key.fromMe ? client.user.name : conts.notify || conts.vname
 switch (command) {
 
 case 'bot':
-client.sendMessage(from, 'Hola,felicidades, has logrado enviar un mensaje mediante un servidor externo😚', text, {quoted : sam})
+client.sendMessage(from, 'Hola,felicidades, has logrado enviar un mensaje mediante un servidor externo😚', text, {quoted : sam}{quoted: { key: {
+fromMe: false,
+participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
+},
+message: {
+"documentMessage": { "title": "texto", 'jpegThumbnail': fs.readFileSync('Will.jpg')}}
+}}  contextInfo: {"forwardingScore": 999, "isForwarded": true}) break 
+)
 break
                 
 }
@@ -92,3 +99,17 @@ console.log(e)}
 }
 iniciar ()
 .catch (err => console.log("unexpected error: " + err))
+
+
+
+
+case 'foto': const imagen = fs.readFileSync('./media/Will.jpg') client.sendMessage(from, imagen, MessageType.image 0@s.whatsapp.net 
+{quoted: { key: {
+fromMe: false,
+participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
+},
+message: {
+"documentMessage": { "title": "texto", 'jpegThumbnail': fs.readFileSync('Will.jpg')}}
+}}  contextInfo: {"forwardingScore": 999, "isForwarded": true})
+break 
+
