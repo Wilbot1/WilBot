@@ -95,7 +95,7 @@ fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
 },
 message: {
-"documentMessage": { "title": "texto", 'jpegThumbnail': fs.readFileSync('Will.jpg')}}
+"pdfMessage": { "title": "will uwu", 'jpegThumbnail': fs.readFileSync('Will.jpg')}}
 }}  contextInfo: {"forwardingScore": 999, "isForwarded": true})
 break 
 
